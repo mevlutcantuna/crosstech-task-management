@@ -1,0 +1,9 @@
+export const LOGIN = {
+  LOGIN_SUCCESS: "LOGIN_SUCCESS",
+  LOGIN_PENDING: "LOGIN_PENDING",
+  LOGIN_ERROR: "LOGIN_ERROR",
+};
+
+export const LOGOUT = {
+  LOGOUT: "LOGOUT",
+};
