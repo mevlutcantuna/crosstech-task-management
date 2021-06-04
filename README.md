@@ -11,11 +11,11 @@ Daha sonra içinde bulunduğunuz repository cihazınıza kurunuz ve aşağıdaki
 
 
 ```
-git clone https://github.com/mevlutcantuna/crosstech-task-management
+git clone https://github.com/mevlutcantuna/task-management
 ```
 
 ```
-cd crosstech-task-management-clone
+cd task-management
 ```
 
 ```
