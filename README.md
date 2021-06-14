@@ -44,7 +44,8 @@ npm run start
 - Redux-Thunk
 - React-Router-Dom
 - React-Modal
+- Material-UI
 - TailwindCSS
-- Axion
+- Axios
 
 ### 
