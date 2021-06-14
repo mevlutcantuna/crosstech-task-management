@@ -19,6 +19,10 @@ npm install
 ```
 
 ```
+cd crosstech-task-magement
+```
+
+```
 npm run start
 ```
 

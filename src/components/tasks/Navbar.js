@@ -14,17 +14,19 @@ const Navbar = (props) => {
   const userName = JSON.parse(localStorage.getItem("user"))?.name;
 
   return (
-    <div className="py-4 px-10 bg-blue-200 text-2xl text-gray-100 flex justify-around shadow-lg">
-      <div>Task Management</div>
-      <div className="flex">
-        <div className="text-xl text-black mr-2 sm:hidden">{userName}</div>
+    <div className='w-full max-w-full flex justify-center'>
+      <div className=" py-4 bg-white text-2xl text-gray-textGray z-10 sm:flex-col flex justify-around items-center shadow-lg w-9/12 md:w-screen  xl:w-7/12  rounded-xl">
+      <div className='text-4xl sm:mb-4'>Task Management</div>
+      <div className="flex py-4 w-56 justify-around rounded-xl bg-orange-light">
+        <div className="flex items-center text-xl  mr-2 sm:hidden">{userName}</div>
         <button
-          className="bg-blue-500 px-2 py-1 text-sm rounded-md"
+          className="bg-orange-main text-white px-4 py-2 text-center text-sm rounded-md"
           onClick={logout}
         >
           Log Out
         </button>
       </div>
+    </div>
     </div>
   );
 };

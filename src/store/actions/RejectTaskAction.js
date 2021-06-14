@@ -12,6 +12,6 @@ const rejectTask = (id, token) => (dispatch) => {
     .catch((err) =>
       dispatch({ type: REJECT_TASK.REJECT_TASK_ERROR, payload: err })
     );
-};
+}; 
 
 export default rejectTask;

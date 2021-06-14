@@ -12,6 +12,6 @@ const completeTask = (id, token) => (dispatch) => {
     .catch((err) =>
       dispatch({ type: COMPLETE_TASK.COMPLETE_TASK_ERROR, payload: err })
     );
-};
+}; 
 
 export default completeTask;

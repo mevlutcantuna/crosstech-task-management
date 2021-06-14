@@ -53,7 +53,7 @@ function CreateTaskModal(props) {
       style={customStyles}
       contentLabel="create a task"
     >
-      <div className="flex flex-col items-start w-96 h-96">
+      <div className="flex flex-col items-start w-96 h-96 ">
         <div className="text-2xl mb-8 flex justify-between w-full items-center">
           <span>Create a new Task</span>
           <span onClick={props.closeModal}>
@@ -68,14 +68,14 @@ function CreateTaskModal(props) {
           onChange={(e) => setCreateTitle(e.target.value)}
           value={createTitle}
           id={"title"}
-          className="rounded-md pl-2 mb-4 w-80 h-12 border-solid border-2 border-blue-300"
+          className="rounded-md pl-2 mb-4 w-80 h-12 border-solid border-2 border-orange-light"
           placeholder={"Title"}
         />
         <label>Description:</label>
         <input
           onChange={(e) => setCreateDesc(e.target.value)}
           value={createDesc}
-          className="rounded-md pl-2 mb-4 w-80 h-12 border-solid border-2 border-blue-300"
+          className="rounded-md pl-2 mb-4 w-80 h-12 border-solid border-2 border-orange-light"
           placeholder={"Description"}
         />
         <div className="flex flex-col">
@@ -83,7 +83,7 @@ function CreateTaskModal(props) {
           <select
             onChange={(e) => setOptionValue(e.target.value)}
             value={optionValue}
-            className="border-solid border-2 border-blue-300 rounded-md w-80 h-12"
+            className="border-solid border-2 border-orange-light rounded-md w-80 h-12"
           >
             <option value={1}>Human Resources Department</option>
             <option value={2}>Sales Department</option>
@@ -95,7 +95,7 @@ function CreateTaskModal(props) {
             onClick={createNewTask}
             className="w-28 h-12"
             variant="contained"
-            color="primary"
+            style={{background:'orange',color:'white'}}
           >
             Create
           </Button>

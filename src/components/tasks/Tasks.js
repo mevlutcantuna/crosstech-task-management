@@ -15,14 +15,14 @@ const Tasks = () => {
 
   return (
     <div>
-      <div>
-        <Navbar />
-      </div>
-      <div className="flex sm:flex-col">
-        <div className="w-1/5 md:w-2/5  sm:w-full">
+      <div className="flex min-h-screen bg-gray-main md:flex-col sm:flex-col">
+        <div className="w-1/5 xl:w-1/3 z-30 md:w-screen md:flex md:justify-center sm:w-full">
           <SideBar />
         </div>
-        <div className="w-4/5 md:w-3/5 sm:w-full">
+        <div className="w-4/5 xl:w-2/3 md:w-full sm:w-full flex flex-col">
+          <div className='fixed left-40 w-full z-10 h-36 flex items-end md:contents bg-gray-main'>
+            <Navbar />
+            </div>
           <ShowingTask />
         </div>
       </div>

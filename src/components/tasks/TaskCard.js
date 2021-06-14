@@ -38,7 +38,6 @@ function TaskCard({ item }) {
 
   const completeTheTask = () => {
     dispatch(completeTask(item.id, token));
-    console.log("completed");
     dispatch(getTasks(currentPage, token));
   };
 
@@ -48,23 +47,24 @@ function TaskCard({ item }) {
   };
 
   return (
-    <div className="flex flex-col justify-between bg-gray-200 w-72 h-72 p-4 m-4 rounded-xl">
+    <div className="flex flex-col justify-between bg-white w-72 h-72 p-4 m-4 rounded-xl">
       <div className="text-xl flex justify-between mb-2">
-        <span>{item.title}</span>
+        <span className='text-textGray text-2xl'>{item.title}</span>
         <span
           className={`${
-            user.name !== item.user.name ? "hidden" : "cursor-pointer"
+            user.name !== item.user.name ? "hidden" : "cursor-pointer hover:text-red-600"
           }`}
           onClick={deleteATask}
         >
           <CloseIcon />
         </span>
       </div>
-      <div>{item.description}</div>
+      <div className='text-gray-light'>{item.description}</div>
       <div
         className={`${
           user.name !== item.user.name ? "hidden" : "cursor-pointer"
         }`}
+        style={{color:'orange'}}
         onClick={openModal}
       >
         <SystemUpdateAltIcon />
@@ -89,7 +89,7 @@ function TaskCard({ item }) {
           item.assignedDepartment !== user.department && "hidden"
         } ${item.status !== 0 && "hidden"} flex justify-between`}
       >
-        <Button onClick={completeTheTask} variant="contained" color={"primary"}>
+        <Button onClick={completeTheTask} variant="contained" style={{background:'green'}} color={"primary"}>
           Complete
         </Button>
         <Button

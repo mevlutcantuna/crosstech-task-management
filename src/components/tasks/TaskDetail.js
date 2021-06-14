@@ -21,20 +21,22 @@ function TaskDetail(props) {
   };
 
   return (
-    <div>
-      <Navbar />
-      <div className="w-screen flex flex-col justify-center items-center relative">
+    <div className="bg-gray-main min-h-screen flex flex-col">
+      <div className="mt-4">
+        <Navbar />
+      </div>
+      <div className="w-screen  flex flex-col justify-center items-center relative ">
         <div
           onClick={backToTasks}
-          className="absolute top-16 left-16 cursor-pointer hover:text-red-400 text-2xl flex items-center"
+          className="absolute top-16 text-center left-16 cursor-pointer hover:text-red-400 text-2xl flex items-center"
         >
           <ArrowBackIcon /> BACK
         </div>
-        <div className="w-80 h-60 mt-40 shadow-xl flex flex-col justify-around items-center p-4">
-          <div className="text-2xl font-medium">
+        <div className="w-1/2 h-96 bg-white rounded-2xl mt-20 shadow-xl flex flex-col justify-around items-center p-4">
+          <div className="text-3xl font-medium text-orange-main">
             {detailOfTask.payload?.title}
           </div>
-          <div>{detailOfTask.payload?.description}</div>
+          <div className='text-2xl'>{detailOfTask.payload?.description}</div>
           <div>Created by : {detailOfTask.payload?.logs[0]?.userName}</div>
           <div>Created date : {detailOfTask.payload?.logs[0]?.date}</div>
         </div>

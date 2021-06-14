@@ -20,8 +20,8 @@ function ShowingTask(props) {
   // console.log(tasks);
 
   return (
-    <div className="text-black ">
-      <div className=" flex justify-center mt-4  text-4xl text-blue-600 font-medium">
+    <div className="text-black mt-40 md:mt-96 md:pt-40 sm:pt-10">
+      <div className=" flex justify-center mt-4  text-4xl text-orange-main font-medium">
         {currentPage.toLowerCase() === "task" && "All Tasks"}
         {currentPage.toLowerCase() === "task/my-tasks" && "My Tasks"}
         {currentPage.toLowerCase() === "task/pendings" && "Departments Tasks"}

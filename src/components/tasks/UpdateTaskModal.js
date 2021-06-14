@@ -48,7 +48,7 @@ function UpdateTaskModal(props) {
     >
       <div className="flex flex-col items-start w-96 h-96">
         <div className="text-2xl mb-8 flex justify-between w-full items-center">
-          <span>Create a new Task</span>
+          <span>Uptade the Task</span>
           <span onClick={props.closeModal}>
             <CloseIcon
               className="cursor-pointer hover:text-red-400"
@@ -61,22 +61,22 @@ function UpdateTaskModal(props) {
           onChange={(e) => setTitle(e.target.value)}
           value={title}
           id={"title"}
-          className="rounded-md pl-2 mb-4 w-80 h-12 border-solid border-2 border-blue-300"
+          className="rounded-md pl-2 mb-4 w-80 h-12 border-solid border-2 border-orange-light"
           placeholder={"Title"}
         />
         <label>Description:</label>
         <input
           onChange={(e) => setDesc(e.target.value)}
           value={desc}
-          className="rounded-md pl-2 mb-4 w-80 h-12 border-solid border-2 border-blue-300"
+          className="rounded-md pl-2 mb-4 w-80 h-12 border-solid border-2 border-orange-light"
           placeholder={"Description"}
         />
         <div className="mt-4 w-full flex items-center justify-center">
           <Button
             onClick={updateNewTask}
-            className="w-28 h-12"
+            className="w-28 h-12 bg-orange-light"
             variant="contained"
-            color="primary"
+            style={{background:'orange',color:'white'}}
           >
             Update Task
           </Button>
